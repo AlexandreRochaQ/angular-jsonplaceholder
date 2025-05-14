@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<h1 class="page-title">{{ post?.title }}</h1>
+<p>{{ post?.body }}</p>
+<h2>Comments</h2>
+<div class="comment-list">
+  <div *ngFor="let comment of comments" class="comment-item">
+    <p>{{ comment.body }}</p>
+    <p>By: <a [routerLink]="['/users', comment.userId]" class="user-link">{{ comment.email }}</a></p>
+  </div>
+</div>

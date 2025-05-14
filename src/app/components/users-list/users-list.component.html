@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+  </head>
+  <body>
+    <h1 class="page-title">Users</h1>
+    <div class="user-list">
+      <div *ngFor="let user of users" class="user-item">
+        <h3>
+          <a [routerLink]="['/users', user.id]" class="user-link">{{ user.name }}</a>
+        </h3>
+        <p>
+          Email:
+          <a href="mailto:{{ user.email }}" class="email-link">{{ user.email }}</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

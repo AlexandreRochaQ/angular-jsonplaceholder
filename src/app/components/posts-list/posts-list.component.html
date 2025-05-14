@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<h1 class="page-title">Posts</h1>
+<div class="post-list">
+  <div *ngFor="let post of posts" class="post-item">
+    <h3>
+      <a [routerLink]="['/posts', post.id]" class="post-link">{{ post.title }}</a>
+    </h3>
+    <p>by <a [routerLink]="['/users', post.userId]" class="user-link">User {{ post.userId }}</a></p>
+  </div>
+</div>
